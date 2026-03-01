@@ -4,6 +4,25 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+
+// Implementação de Movimentação da Torre
+
+    void moverTorre(int casas) {
+        if ( casas > 0) {
+            printf("Direita\n");
+            moverTorre(casas - 1);
+        }
+    }
+
+// Implementação de Movimentação da Rainha
+    
+    void moverRainha(int casas) {
+        if ( casas > 0) {
+            printf("Esquerda\n");
+            moverRainha(casas - 1);
+        }
+    }
+
 int main() {
     // Nível Novato - Movimentação das Peças
     
@@ -18,23 +37,6 @@ int main() {
         printf("Cima, Direita\n");
         i++;
     }
-
-    // Implementação de Movimentação da Torre
-
-    printf("\nMovimento da torre: \n\n");
-
-    for ( int i = 1; i <= movimento_torre; i++) {
-        printf("Direita\n");
-    }
-
-    // Implementação de Movimentação da Rainha
-    printf("\nMovimento da rainha: \n\n");
-    i = 1;
-    do {
-        printf("Esquerda\n");
-        i++;
-    } while (i <= movimento_rainha);
-
 
     /* Nível Aventureiro - Movimentação do Cavalo, foi usado um loop for de iteração única para garantir que o programa execute até que
     o cavalo faça dois movimentos verticais e um horizontal */
@@ -55,11 +57,12 @@ int main() {
     }
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    
+    printf ("\nMovimento da torre:\n");
+    moverTorre(5);
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    printf ("\nMovimento da rainha:\n");
+    moverRainha(8);
 
     return 0;
 }
