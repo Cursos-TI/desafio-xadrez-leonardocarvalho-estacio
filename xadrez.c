@@ -23,26 +23,29 @@
         }
     }
 
+// Implementação de Movimentação do Bispo
+    void moverBispo(int casas) {
+        if (casas > 0) {
+            for (int j = 1; j <= 1; j++) {
+                printf ("Cima, ");
+            }
+        printf ("Direita\n");
+        moverBispo(casas - 1);
+        }
+    }
+
 int main() {
     // Nível Novato - Movimentação das Peças
     
     // Declaração de variaveis
-    int movimento_bispo = 5, movimento_torre = 5, movimento_rainha = 8;
     int movimento_cavalo_horizontal = 1, movimento_cavalo_vertical = 2;
 
-    // Implementação de Movimentação do Bispo
-    int i = 1;
-    printf("Movimento do bispo: \n\n");
-    while( i <= movimento_bispo) {
-        printf("Cima, Direita\n");
-        i++;
-    }
 
     /* Nível Aventureiro - Movimentação do Cavalo, foi usado um loop for de iteração única para garantir que o programa execute até que
     o cavalo faça dois movimentos verticais e um horizontal */
     
     printf("\nMovimento do cavalo: \n\n");
-    for (i = 1;i <= 1; i++){ 
+    for (int i = 1;i <= 1; i++){ 
         int j = 0;
         while (j < movimento_cavalo_vertical) {
             printf("Baixo\n");
@@ -63,6 +66,9 @@ int main() {
 
     printf ("\nMovimento da rainha:\n");
     moverRainha(8);
+
+    printf ("\nMovimento do bispo:\n");
+    moverBispo(5);
 
     return 0;
 }
