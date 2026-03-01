@@ -46,7 +46,7 @@ int main() {
     printf ("\nMovimento do bispo:\n");
     moverBispo(5);
 
-    /* Nível Aventureiro - Movimentação do Cavalo, utilizando loops aninhados, controle de fluxo e múltiplas variáveis */
+    /* Movimentação do Cavalo, utilizando loops aninhados, controle de fluxo e múltiplas variáveis */
     
     printf("\nMovimento do cavalo: \n");
     for (int i = 1, pular = 0;i <= 3; i++){ 
