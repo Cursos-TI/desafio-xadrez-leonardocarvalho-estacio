@@ -12,13 +12,19 @@ int main() {
 
     // Implementação de Movimentação do Bispo
     int contador = 1;
+    printf("Movimento do bispo: \n\n");
     while( contador <= movimento_bispo) {
         printf("Cima, Direita\n");
         contador++;
     }
 
     // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+
+    printf("\nMovimento da torre: \n\n");
+
+    for ( int contador2 = 1; contador2 <= movimento_torre; contador2++) {
+        printf("Direita\n");
+    }
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
