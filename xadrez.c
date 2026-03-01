@@ -35,30 +35,6 @@
     }
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    
-    // Declaração de variaveis
-    int movimento_cavalo_horizontal = 1, movimento_cavalo_vertical = 2;
-
-
-    /* Nível Aventureiro - Movimentação do Cavalo, foi usado um loop for de iteração única para garantir que o programa execute até que
-    o cavalo faça dois movimentos verticais e um horizontal */
-    
-    printf("\nMovimento do cavalo: \n\n");
-    for (int i = 1;i <= 1; i++){ 
-        int j = 0;
-        while (j < movimento_cavalo_vertical) {
-            printf("Baixo\n");
-            j++;
-        }
-
-        int k = 0;
-        do {
-            printf("Esquerda\n");
-            k++;
-        } while (k < movimento_cavalo_horizontal);
-    }
-
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     
     printf ("\nMovimento da torre:\n");
@@ -69,6 +45,26 @@ int main() {
 
     printf ("\nMovimento do bispo:\n");
     moverBispo(5);
+
+    /* Nível Aventureiro - Movimentação do Cavalo, utilizando loops aninhados, controle de fluxo e múltiplas variáveis */
+    
+    printf("\nMovimento do cavalo: \n");
+    for (int i = 1, pular = 0;i <= 3; i++){ 
+        if (pular == 1) {
+            continue;
+        }
+
+        for (int j = 1; j<=2; j++ ){
+            if (i < 3) {
+                printf ("Cima\n");
+                break;
+            } else {
+                printf ("Direita\n");
+                pular = 1;
+                break;
+            }
+        }
+    }
 
     return 0;
 }
